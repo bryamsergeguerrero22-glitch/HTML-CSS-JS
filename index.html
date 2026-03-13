@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Nivel pro</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/style.css">
+    <script src="/js/scripts.js" defer></script>
+</head>
+<body>
+        <video autoplay loop muted id="video_background">
+          <source src="/pureba-video.mp4" type="video/mp4">
+          </video>
+
+         <div class = "Contenedor-Principal">
+         <form id = "Formulario_de_registro" novalidate>
+          <h2>Crea tu cuenta</h2>
+
+          <div class="Datos-entrada">
+                <label for="Nombreusuario"> Nombre de usuario</label>
+                <input type="text"id = "Nombreusuario" placeholder="" required minlength="4">
+                <span class = "Mensaje_error"> El usuario debe tener al menos 7 caracteres. </span>
+          </div>
+
+          <div class="Datos-entrada">
+                <label for="Correo"> Correo electronico </label>
+                <input type="email" id="Correo" placeholder="" required>
+                <span class="Mensaje_error"> Ingresa un correo electronico valido por favor. </span>
+          </div>
+
+          <div class="Datos-entrada">
+               <label for="Contraseña"> Contraseña</label>
+               <input type="password" id="Contraseña" required pattern="^(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d]{8,}$">
+               <span class ="Mensaje_error">Mínimo 8 caracteres, incluyendo letas y números. </span>
+               <button type="button" id="GenerarContraseña">GenerarContraseña</button>
+               <div class="Nivel-seguridad" id="Nivel-seguridad"></div>
+          </div>
+          <button type="submit" id="botonenviar"> Registrarme</button>
+        </form> 
+
+           <div class="contenedor-tareas">
+            <h3>Lista de tareas</h3>
+            <input type="text" id="nuevaTarea" placeholder="Escribe cualquier tarea">
+            <button type="button" id="agregarTarea">Agregar</button>
+            <ul id="listaTareas"></ul>
+        </div>
+        
+    </div>
+</body>
+</html>
